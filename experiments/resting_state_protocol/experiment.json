@@ -1,0 +1,73 @@
+{
+  "id": "resting_state_protocol",
+  "name": "Resting-State Physiological Baseline",
+  "description": "Reusable resting-state physiological baseline protocol; browser-based control and responses, optional physiological requirements.",
+  "version": "1.0",
+  "participants": [
+    {
+      "id": "P01",
+      "label": "Participant 1"
+    }
+  ],
+  "streams": [
+    {
+      "modality": "EEG",
+      "required": false
+    },
+    {
+      "modality": "ECG",
+      "required": false
+    },
+    {
+      "modality": "EDA",
+      "required": false
+    }
+  ],
+  "phases": [
+    {
+      "id": "instructions_1",
+      "type": "instructions",
+      "title": "Preparation",
+      "duration_sec": 15,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Preparation \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "eyes_open_2",
+      "type": "eyes_open",
+      "title": "Eyes open baseline",
+      "duration_sec": 60,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Eyes open baseline \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "eyes_closed_3",
+      "type": "eyes_closed",
+      "title": "Eyes closed baseline",
+      "duration_sec": 60,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Eyes closed baseline \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "debrief_4",
+      "type": "debrief",
+      "title": "End baseline",
+      "duration_sec": 10,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "End baseline \u2014 follow the moderator instructions."
+      }
+    }
+  ],
+  "repetitions": 1
+}

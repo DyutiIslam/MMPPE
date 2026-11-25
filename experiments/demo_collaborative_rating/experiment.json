@@ -1,0 +1,15 @@
+{
+  "id":"demo_collaborative_rating","name":"3-Participant Collaborative Rating Demo","description":"Multi-participant proof experiment created entirely as an experiment package.","version":"0.3",
+  "participants":[{"id":"P01","label":"Participant 1"},{"id":"P02","label":"Participant 2"},{"id":"P03","label":"Participant 3"}],
+  "streams":[
+    {"modality":"EEG","participant_id":"P01","required":false},{"modality":"EEG","participant_id":"P02","required":false},{"modality":"EEG","participant_id":"P03","required":false},
+    {"modality":"AUDIO","required":false},{"modality":"VIDEO","required":false}
+  ],
+  "phases":[
+    {"id":"instructions","type":"instruction","title":"Instructions","stimulus":{"kind":"text","value":"Read the scenario, rate it individually, discuss as a group, then rate it again."}},
+    {"id":"scenario","type":"stimulus","title":"Scenario","duration_sec":10,"advance_when":"timer","stimulus":{"kind":"text","value":"A team must choose between a fast uncertain option and a slower reliable option."}},
+    {"id":"initial_rating","type":"response","title":"Initial rating","response":{"kind":"scale","min":1,"max":5,"prompt":"How strongly do you prefer the reliable option?"},"advance_when":"all_responses"},
+    {"id":"discussion","type":"group","title":"Group discussion","duration_sec":20,"advance_when":"timer","stimulus":{"kind":"text","value":"Discuss your reasoning with the group."}},
+    {"id":"final_rating","type":"response","title":"Final rating","response":{"kind":"scale","min":1,"max":5,"prompt":"After discussion, how strongly do you prefer the reliable option?"},"advance_when":"all_responses"}
+  ]
+}

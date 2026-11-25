@@ -1,0 +1,55 @@
+{
+  "id": "demo_single_participant",
+  "name": "Single-Participant Multimodal Demo",
+  "version": "0.3",
+  "participants": [
+    {
+      "id": "P01",
+      "label": "Participant 1"
+    }
+  ],
+  "streams": [
+    {
+      "modality": "EEG",
+      "participant_id": "P01",
+      "required": false
+    },
+    {
+      "modality": "ECG",
+      "participant_id": "P01",
+      "required": false
+    },
+    {
+      "modality": "EDA",
+      "participant_id": "P01",
+      "required": false
+    }
+  ],
+  "phases": [
+    {
+      "id": "baseline",
+      "type": "rest",
+      "duration_sec": 10
+    },
+    {
+      "id": "stimulus",
+      "type": "stimulus",
+      "duration_sec": 5,
+      "stimulus": {
+        "kind": "text",
+        "value": "MMPPE demonstration stimulus"
+      }
+    },
+    {
+      "id": "response",
+      "type": "response",
+      "duration_sec": 10,
+      "response": {
+        "kind": "scale",
+        "min": 1,
+        "max": 5
+      }
+    }
+  ],
+  "description": "Single-participant multimodal experiment package."
+}

@@ -1,0 +1,126 @@
+{
+  "id": "stimulus_response_study",
+  "name": "Stimulus and Response Study",
+  "description": "Reusable stimulus and response study protocol; browser-based control and responses, optional physiological requirements.",
+  "version": "1.0",
+  "participants": [
+    {
+      "id": "P01",
+      "label": "Participant 1"
+    },
+    {
+      "id": "P02",
+      "label": "Participant 2"
+    }
+  ],
+  "streams": [
+    {
+      "modality": "EEG",
+      "required": false
+    },
+    {
+      "modality": "ECG",
+      "required": false
+    },
+    {
+      "modality": "EDA",
+      "required": false
+    },
+    {
+      "modality": "EYE",
+      "required": false
+    }
+  ],
+  "phases": [
+    {
+      "id": "instructions_1",
+      "type": "instructions",
+      "title": "Instructions",
+      "duration_sec": 20,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Instructions \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "baseline_2",
+      "type": "baseline",
+      "title": "Resting baseline",
+      "duration_sec": 30,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Resting baseline \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "stimulus_3",
+      "type": "stimulus",
+      "title": "Visual stimulus",
+      "duration_sec": 15,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Visual stimulus \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "response_4",
+      "type": "response",
+      "title": "Stimulus rating",
+      "duration_sec": 20,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Stimulus rating \u2014 follow the moderator instructions."
+      },
+      "response": {
+        "kind": "scale",
+        "min": 1,
+        "max": 5,
+        "prompt": "Enter a rating from 1 to 5."
+      }
+    },
+    {
+      "id": "confidence_5",
+      "type": "confidence",
+      "title": "Confidence judgment",
+      "duration_sec": 15,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Confidence judgment \u2014 follow the moderator instructions."
+      },
+      "response": {
+        "kind": "scale",
+        "min": 1,
+        "max": 5,
+        "prompt": "Enter a rating from 1 to 5."
+      }
+    },
+    {
+      "id": "break_6",
+      "type": "break",
+      "title": "Recovery",
+      "duration_sec": 15,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Recovery \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "debrief_7",
+      "type": "debrief",
+      "title": "Debrief",
+      "duration_sec": 10,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Debrief \u2014 follow the moderator instructions."
+      }
+    }
+  ],
+  "repetitions": 1
+}

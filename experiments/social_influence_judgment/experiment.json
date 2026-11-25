@@ -1,0 +1,95 @@
+{
+  "id": "social_influence_judgment",
+  "name": "Social Influence and Judgment",
+  "description": "Three-person social psychology demonstration of initial judgments, group feedback, revised judgments, and confidence. Demonstration participants are simulated; no sensor acquisition.",
+  "version": "0.5-demo",
+  "participants": [
+    {
+      "id": "P01",
+      "label": "Participant 1"
+    },
+    {
+      "id": "P02",
+      "label": "Participant 2"
+    },
+    {
+      "id": "P03",
+      "label": "Participant 3"
+    }
+  ],
+  "streams": [],
+  "phases": [
+    {
+      "id": "instructions",
+      "type": "instruction",
+      "title": "Study Instructions",
+      "stimulus": {
+        "kind": "text",
+        "value": "Read a fictional social situation, provide an initial judgment, review the group ratings, and decide whether to revise your answer."
+      }
+    },
+    {
+      "id": "scenario",
+      "type": "stimulus",
+      "title": "Social Scenario",
+      "stimulus": {
+        "kind": "text",
+        "value": "During a group project meeting, three students make weekend plans while another team member is present but not invited. How likely is it that the exclusion was intentional?"
+      }
+    },
+    {
+      "id": "initial_rating",
+      "type": "response",
+      "title": "Independent Judgment",
+      "response": {
+        "kind": "scale",
+        "min": 1,
+        "max": 5,
+        "prompt": "How likely was the exclusion intentional? (1 = very unlikely; 5 = very likely)"
+      },
+      "advance_when": "all_responses"
+    },
+    {
+      "id": "feedback",
+      "type": "group",
+      "title": "Group Feedback",
+      "stimulus": {
+        "kind": "text",
+        "value": "Review the anonymous initial ratings. Would knowing others' judgments change your assessment?"
+      }
+    },
+    {
+      "id": "final_rating",
+      "type": "response",
+      "title": "Revised Judgment",
+      "response": {
+        "kind": "scale",
+        "min": 1,
+        "max": 5,
+        "prompt": "After seeing the group's responses, how likely was the exclusion intentional?"
+      },
+      "advance_when": "all_responses"
+    },
+    {
+      "id": "confidence",
+      "type": "response",
+      "title": "Confidence",
+      "response": {
+        "kind": "scale",
+        "min": 1,
+        "max": 5,
+        "prompt": "How confident are you in your final judgment?"
+      },
+      "advance_when": "all_responses"
+    },
+    {
+      "id": "debrief",
+      "type": "instruction",
+      "title": "Debrief",
+      "stimulus": {
+        "kind": "text",
+        "value": "Compare individual judgments before and after social feedback. Responses in this demonstration are simulated, not research findings."
+      }
+    }
+  ]
+}

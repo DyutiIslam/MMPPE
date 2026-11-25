@@ -1,0 +1,53 @@
+{
+  "id": "test_studio_roundtrip",
+  "name": "Test Builder Study",
+  "description": "",
+  "version": "0.3",
+  "participants": [
+    {
+      "id": "P01",
+      "label": "",
+      "role": "participant",
+      "metadata": {}
+    }
+  ],
+  "phases": [
+    {
+      "id": "baseline",
+      "type": "baseline",
+      "title": "Rest",
+      "duration_sec": 30.0,
+      "stimulus": null,
+      "response": null,
+      "participants": null,
+      "advance_when": "moderator",
+      "metadata": {}
+    },
+    {
+      "id": "response",
+      "type": "response",
+      "title": "Rating",
+      "duration_sec": null,
+      "stimulus": null,
+      "response": {
+        "kind": "scale",
+        "min": 1,
+        "max": 5
+      },
+      "participants": null,
+      "advance_when": "moderator",
+      "metadata": {}
+    }
+  ],
+  "streams": [
+    {
+      "modality": "EEG",
+      "participant_id": null,
+      "required": false,
+      "min_streams": 1,
+      "metadata": {}
+    }
+  ],
+  "repetitions": 1,
+  "metadata": {}
+}

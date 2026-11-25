@@ -1,0 +1,163 @@
+{
+  "id": "group_decision_protocol",
+  "name": "Collaborative Decision and Confidence",
+  "description": "Reusable collaborative decision and confidence protocol; browser-based control and responses, optional physiological requirements.",
+  "version": "1.0",
+  "participants": [
+    {
+      "id": "P01",
+      "label": "Participant 1"
+    },
+    {
+      "id": "P02",
+      "label": "Participant 2"
+    },
+    {
+      "id": "P03",
+      "label": "Participant 3"
+    },
+    {
+      "id": "P04",
+      "label": "Participant 4"
+    },
+    {
+      "id": "P05",
+      "label": "Participant 5"
+    }
+  ],
+  "streams": [
+    {
+      "modality": "EEG",
+      "required": false
+    },
+    {
+      "modality": "ECG",
+      "required": false
+    },
+    {
+      "modality": "EMG",
+      "required": false
+    },
+    {
+      "modality": "EDA",
+      "required": false
+    },
+    {
+      "modality": "AUDIO",
+      "required": false
+    },
+    {
+      "modality": "VIDEO",
+      "required": false
+    }
+  ],
+  "phases": [
+    {
+      "id": "instructions_1",
+      "type": "instructions",
+      "title": "Instructions",
+      "duration_sec": 20,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Instructions \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "baseline_2",
+      "type": "baseline",
+      "title": "Baseline",
+      "duration_sec": 30,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Baseline \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "stimulus_3",
+      "type": "stimulus",
+      "title": "Group scenario",
+      "duration_sec": 20,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Group scenario \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "response_4",
+      "type": "response",
+      "title": "Initial judgment",
+      "duration_sec": 20,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Initial judgment \u2014 follow the moderator instructions."
+      },
+      "response": {
+        "kind": "scale",
+        "min": 1,
+        "max": 5,
+        "prompt": "Enter a rating from 1 to 5."
+      }
+    },
+    {
+      "id": "discussion_5",
+      "type": "discussion",
+      "title": "Group discussion",
+      "duration_sec": 45,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Group discussion \u2014 follow the moderator instructions."
+      }
+    },
+    {
+      "id": "response_6",
+      "type": "response",
+      "title": "Final judgment",
+      "duration_sec": 20,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Final judgment \u2014 follow the moderator instructions."
+      },
+      "response": {
+        "kind": "scale",
+        "min": 1,
+        "max": 5,
+        "prompt": "Enter a rating from 1 to 5."
+      }
+    },
+    {
+      "id": "confidence_7",
+      "type": "confidence",
+      "title": "Decision confidence",
+      "duration_sec": 15,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Decision confidence \u2014 follow the moderator instructions."
+      },
+      "response": {
+        "kind": "scale",
+        "min": 1,
+        "max": 5,
+        "prompt": "Enter a rating from 1 to 5."
+      }
+    },
+    {
+      "id": "debrief_8",
+      "type": "debrief",
+      "title": "Debrief",
+      "duration_sec": 15,
+      "advance_when": "moderator",
+      "stimulus": {
+        "kind": "text",
+        "value": "Debrief \u2014 follow the moderator instructions."
+      }
+    }
+  ],
+  "repetitions": 1
+}

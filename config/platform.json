@@ -1,0 +1,10 @@
+{
+  "platform": "MMPPE",
+  "version": "0.3-rc1",
+  "experiment_root": "experiments",
+  "output_root": "data/sessions",
+  "marker_stream": "MMPPE_Markers",
+  "acquisition": {
+    "primary_transport": "LSL"
+  }
+}
